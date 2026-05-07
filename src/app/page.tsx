@@ -1,31 +1,27 @@
 'use client'
 
+import Navbar from '@/components/landing/Navbar'
+import HeroSection from '@/components/landing/HeroSection'
+import FeaturesSection from '@/components/landing/FeaturesSection'
+import PhilosophySection from '@/components/landing/PhilosophySection'
+import ProtocolSection from '@/components/landing/ProtocolSection'
+import PricingSection from '@/components/landing/PricingSection'
+import CTASection from '@/components/landing/CTASection'
+import FooterSection from '@/components/landing/FooterSection'
+
 export default function Home() {
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '100vh',
-      gap: '2rem',
-      padding: '1rem'
-    }}>
-      <div style={{
-        position: 'relative',
-        width: '6rem',
-        height: '6rem'
-      }}>
-        <img
-          src="/logo.svg"
-          alt="Z.ai Logo"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain'
-          }}
-        />
-      </div>
+    <div className="min-h-screen flex flex-col bg-[#F2F0E9]">
+      <Navbar />
+      <main className="flex-1">
+        <HeroSection />
+        <FeaturesSection />
+        <PhilosophySection />
+        <ProtocolSection />
+        <PricingSection />
+        <CTASection />
+      </main>
+      <FooterSection />
     </div>
   )
 }
